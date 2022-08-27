@@ -24,8 +24,6 @@ connection.once("open",()=>{
 app.use(express.json()); //decode our json data
 app.use("/uploads",express.static("uploads"));
 
-const userRouter = require("./routes/user");
-app.use("/user",userRouter);
 
 const duserRouter = require("./routes/duser");
 app.use("/duser",duserRouter);

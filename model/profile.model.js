@@ -16,7 +16,7 @@ const Profile = Schema(
     about: String,
     img: {
       type: String,
-      default: "",
+      default: "null",
     },
   },
   {

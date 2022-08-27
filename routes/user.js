@@ -4,6 +4,8 @@ const Profile = require("../model/profile.model");
 const config = require("../config");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
+const DUser = require("../model/duser.model")
+
 
 //java web token generated for every idividual user
 const router = express.Router();

@@ -21,7 +21,7 @@ const PUser = Schema({
   },
   img: {
     type: String,
-    default: "",
+    default: "null",
   },
   attribute : [
     { variable: String, value: String }

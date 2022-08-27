@@ -20,7 +20,7 @@ const middleware = require("../middleware")
 
 router.route("/").get((req,res)=> res.json("Your UDser Page Got it"));
 
-router.route("/getdoctors").get(middleware.checkToken,(req, res) => {
+router.route("/getdoctors").get((req, res) => {
   DUser.find({ name: { $ne: "" } }, (err, result) => {
     if (err) return res.json(err);
     return res.status(200).json({status:true, data: result });

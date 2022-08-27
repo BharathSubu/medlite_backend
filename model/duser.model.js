@@ -29,7 +29,7 @@ const DUser = Schema({
   },
   img: {
     type: String,
-    default: "",
+    default: "null",
   },
   attribute : [{
     type: String
