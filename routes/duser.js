@@ -29,6 +29,15 @@ router.route("/getdoctors").get((req, res) => {
 
 router.route("/getMypatients/:email").get( (req, res) => {
   PUser.find({ doctors: {$in: [ req.params.email ] }}, (err, result) => {
+    console.log(result);
+    if (err) return res.json(err);
+    return res.status(200).json({status:true, data: result });
+  });
+});
+
+router.route("/getMyRequest/:email").get( (req, res) => {
+  DUser.find({ requests : {$in: [ req.params.email ] }}, (err, result) => {
+    console.log(result);
     if (err) return res.json(err);
     return res.status(200).json({status:true, data: result });
   });

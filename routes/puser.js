@@ -147,7 +147,7 @@ router.route("/register").post((req, res) => {
   
 
 
-  router.route("/sendrerq/:email/:pemail").get( (req, res) => {
+  router.route("/sendreq/:email/:pemail").get( (req, res) => {
     //finding the profile data of the user from mongodb database
     DUser.findOneAndUpdate( // to find the user and update the password from the collections
     { email: req.params.email },//user name remains the same
